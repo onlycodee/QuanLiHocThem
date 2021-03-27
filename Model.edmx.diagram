@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="505d905c43af4ca482255d2b5c37cfc8" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="DBModel.BienLaiThuHocPhi" Width="1.5" PointX="10.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.BienLaiTraLuong" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.BuoiHoc" Width="1.5" PointX="10.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.DiemDanh" Width="1.5" PointX="12.375" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.GiaoVien" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.HocSinh" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.KhoaHoc" Width="1.5" PointX="6" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.LopHoc" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.MonHoc" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.MucHocPhi" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.MucThanhToan" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.sysdiagram" Width="1.5" PointX="2.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.FK__BienLaiTh__MaHoc__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__BienLaiTh__MaLop__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__BienLaiTr__MaGia__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__BuoiHoc__MaLopHo__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__DiemDanh__MaBuoi__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__DiemDanh__MaHocS__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__GiaoVien__MaMonH__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__GiaoVien__MaMucT__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__LopHoc__MaGiaoVi__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__LopHoc__MaKhoaHo__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__LopHoc__MaMonHoc__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK__LopHoc__MaMucHoc__3B75D760" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBModel.CaHoc" Width="1.5" PointX="13" PointY="9.875" />
+        <AssociationConnector Association="DBModel.FK__BuoiHoc__MaCaHoc__5DCAEF64" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
