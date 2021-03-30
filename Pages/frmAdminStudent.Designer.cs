@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLiHocThem
 {
-    partial class frmMain
+    partial class frmAdminStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,8 @@ namespace QuanLiHocThem
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -44,7 +46,6 @@ namespace QuanLiHocThem
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGioiTinh = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -107,8 +108,10 @@ namespace QuanLiHocThem
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1,
-            this.barButtonItem2});
-            this.barManager1.MaxItemId = 2;
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4});
+            this.barManager1.MaxItemId = 4;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -119,7 +122,9 @@ namespace QuanLiHocThem
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4)});
             this.bar2.Text = "Tools";
             // 
             // barButtonItem1
@@ -127,12 +132,28 @@ namespace QuanLiHocThem
             this.barButtonItem1.Caption = "Add";
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Remove";
+            this.barButtonItem2.Caption = "Delete";
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Update";
+            this.barButtonItem3.Id = 2;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Cancal";
+            this.barButtonItem4.Id = 3;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // bar3
             // 
@@ -228,7 +249,6 @@ namespace QuanLiHocThem
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMa,
             this.colTen,
             this.colNgaySinh,
             this.colGioiTinh,
@@ -237,47 +257,40 @@ namespace QuanLiHocThem
             this.gridView1.GridControl = this.gridControl;
             this.gridView1.Name = "gridView1";
             // 
-            // colMa
-            // 
-            this.colMa.FieldName = "Ma";
-            this.colMa.Name = "colMa";
-            this.colMa.Visible = true;
-            this.colMa.VisibleIndex = 0;
-            // 
             // colTen
             // 
             this.colTen.FieldName = "Ten";
             this.colTen.Name = "colTen";
             this.colTen.Visible = true;
-            this.colTen.VisibleIndex = 1;
+            this.colTen.VisibleIndex = 0;
             // 
             // colNgaySinh
             // 
             this.colNgaySinh.FieldName = "NgaySinh";
             this.colNgaySinh.Name = "colNgaySinh";
             this.colNgaySinh.Visible = true;
-            this.colNgaySinh.VisibleIndex = 2;
+            this.colNgaySinh.VisibleIndex = 1;
             // 
             // colGioiTinh
             // 
             this.colGioiTinh.FieldName = "GioiTinh";
             this.colGioiTinh.Name = "colGioiTinh";
             this.colGioiTinh.Visible = true;
-            this.colGioiTinh.VisibleIndex = 3;
+            this.colGioiTinh.VisibleIndex = 2;
             // 
             // colSoDienThoai
             // 
             this.colSoDienThoai.FieldName = "SoDienThoai";
             this.colSoDienThoai.Name = "colSoDienThoai";
             this.colSoDienThoai.Visible = true;
-            this.colSoDienThoai.VisibleIndex = 4;
+            this.colSoDienThoai.VisibleIndex = 3;
             // 
             // colDiaChi
             // 
             this.colDiaChi.FieldName = "DiaChi";
             this.colDiaChi.Name = "colDiaChi";
             this.colDiaChi.Visible = true;
-            this.colDiaChi.VisibleIndex = 5;
+            this.colDiaChi.VisibleIndex = 4;
             // 
             // Root
             // 
@@ -467,6 +480,7 @@ namespace QuanLiHocThem
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -534,11 +548,12 @@ namespace QuanLiHocThem
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMa;
         private DevExpress.XtraGrid.Columns.GridColumn colTen;
         private DevExpress.XtraGrid.Columns.GridColumn colNgaySinh;
         private DevExpress.XtraGrid.Columns.GridColumn colGioiTinh;
         private DevExpress.XtraGrid.Columns.GridColumn colSoDienThoai;
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }

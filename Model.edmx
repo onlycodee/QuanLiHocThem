@@ -61,7 +61,7 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ten" Type="nvarchar" MaxLength="1" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="500" />
           <Property Name="NgaySinh" Type="datetime" />
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
           <Property Name="SoDienThoai" Type="varchar" MaxLength="50" />
@@ -87,7 +87,7 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ten" Type="nvarchar" MaxLength="1" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="LopHoc">
           <Key>
@@ -107,7 +107,7 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ten" Type="nvarchar" MaxLength="1" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="500" />
           <Property Name="SoLuongGiaoVien" Type="int" />
         </EntityType>
         <EntityType Name="MucHocPhi">
@@ -423,7 +423,7 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NgayHoc" Type="DateTime" />
+          <Property Name="NgayHoc" Type="DateTime" Precision="0" />
           <Property Name="MaLopHoc" Type="Int32" />
           <NavigationProperty Name="LopHoc" Relationship="Self.FK__BuoiHoc__MaLopHo__3C69FB99" FromRole="BuoiHoc" ToRole="LopHoc" />
           <NavigationProperty Name="DiemDanhs" Relationship="Self.FK__DiemDanh__MaBuoi__3D5E1FD2" FromRole="BuoiHoc" ToRole="DiemDanh" />
@@ -447,7 +447,7 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ten" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="3" />
           <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="SoDienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -479,7 +479,7 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ten" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="LopHocs" Relationship="Self.FK__LopHoc__MaKhoaHo__35BCFE0A" FromRole="KhoaHoc" ToRole="LopHoc" />
         </EntityType>
         <EntityType Name="LopHoc">
@@ -506,7 +506,7 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ten" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SoLuongGiaoVien" Type="Int32" />
           <NavigationProperty Name="GiaoViens" Relationship="Self.FK__GiaoVien__MaMonH__3A81B327" FromRole="MonHoc" ToRole="GiaoVien" />
           <NavigationProperty Name="LopHocs" Relationship="Self.FK__LopHoc__MaMonHoc__36B12243" FromRole="MonHoc" ToRole="LopHoc" />
