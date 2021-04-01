@@ -129,28 +129,28 @@ namespace QuanLiHocThem
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Add";
+            this.barButtonItem1.Caption = "Thêm mới";
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Delete";
+            this.barButtonItem2.Caption = "Xóa";
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.Caption = "Update";
+            this.barButtonItem3.Caption = "Cập nhập";
             this.barButtonItem3.Id = 2;
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.Caption = "Cancal";
+            this.barButtonItem4.Caption = "Hủy";
             this.barButtonItem4.Id = 3;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
@@ -329,10 +329,10 @@ namespace QuanLiHocThem
             // TenTextEdit
             // 
             this.TenTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.hocSinhBindingSource, "Ten", true));
-            this.TenTextEdit.Location = new System.Drawing.Point(80, 12);
+            this.TenTextEdit.Location = new System.Drawing.Point(77, 12);
             this.TenTextEdit.MenuManager = this.barManager1;
             this.TenTextEdit.Name = "TenTextEdit";
-            this.TenTextEdit.Size = new System.Drawing.Size(724, 20);
+            this.TenTextEdit.Size = new System.Drawing.Size(727, 20);
             this.TenTextEdit.StyleController = this.dataLayoutControl;
             this.TenTextEdit.TabIndex = 5;
             // 
@@ -340,7 +340,7 @@ namespace QuanLiHocThem
             // 
             this.NgaySinhDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.hocSinhBindingSource, "NgaySinh", true));
             this.NgaySinhDateEdit.EditValue = null;
-            this.NgaySinhDateEdit.Location = new System.Drawing.Point(80, 36);
+            this.NgaySinhDateEdit.Location = new System.Drawing.Point(77, 36);
             this.NgaySinhDateEdit.MenuManager = this.barManager1;
             this.NgaySinhDateEdit.Name = "NgaySinhDateEdit";
             this.NgaySinhDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -348,37 +348,37 @@ namespace QuanLiHocThem
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.NgaySinhDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.NgaySinhDateEdit.Size = new System.Drawing.Size(326, 20);
+            this.NgaySinhDateEdit.Size = new System.Drawing.Size(329, 20);
             this.NgaySinhDateEdit.StyleController = this.dataLayoutControl;
             this.NgaySinhDateEdit.TabIndex = 6;
             // 
             // GioiTinhTextEdit
             // 
             this.GioiTinhTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.hocSinhBindingSource, "GioiTinh", true));
-            this.GioiTinhTextEdit.Location = new System.Drawing.Point(478, 36);
+            this.GioiTinhTextEdit.Location = new System.Drawing.Point(475, 36);
             this.GioiTinhTextEdit.MenuManager = this.barManager1;
             this.GioiTinhTextEdit.Name = "GioiTinhTextEdit";
-            this.GioiTinhTextEdit.Size = new System.Drawing.Size(326, 20);
+            this.GioiTinhTextEdit.Size = new System.Drawing.Size(329, 20);
             this.GioiTinhTextEdit.StyleController = this.dataLayoutControl;
             this.GioiTinhTextEdit.TabIndex = 7;
             // 
             // SoDienThoaiTextEdit
             // 
             this.SoDienThoaiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.hocSinhBindingSource, "SoDienThoai", true));
-            this.SoDienThoaiTextEdit.Location = new System.Drawing.Point(478, 60);
+            this.SoDienThoaiTextEdit.Location = new System.Drawing.Point(475, 60);
             this.SoDienThoaiTextEdit.MenuManager = this.barManager1;
             this.SoDienThoaiTextEdit.Name = "SoDienThoaiTextEdit";
-            this.SoDienThoaiTextEdit.Size = new System.Drawing.Size(326, 20);
+            this.SoDienThoaiTextEdit.Size = new System.Drawing.Size(329, 20);
             this.SoDienThoaiTextEdit.StyleController = this.dataLayoutControl;
             this.SoDienThoaiTextEdit.TabIndex = 8;
             // 
             // DiaChiTextEdit
             // 
             this.DiaChiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.hocSinhBindingSource, "DiaChi", true));
-            this.DiaChiTextEdit.Location = new System.Drawing.Point(80, 60);
+            this.DiaChiTextEdit.Location = new System.Drawing.Point(77, 60);
             this.DiaChiTextEdit.MenuManager = this.barManager1;
             this.DiaChiTextEdit.Name = "DiaChiTextEdit";
-            this.DiaChiTextEdit.Size = new System.Drawing.Size(326, 20);
+            this.DiaChiTextEdit.Size = new System.Drawing.Size(329, 20);
             this.DiaChiTextEdit.StyleController = this.dataLayoutControl;
             this.DiaChiTextEdit.TabIndex = 9;
             // 
@@ -422,8 +422,8 @@ namespace QuanLiHocThem
             this.ItemForTen.Location = new System.Drawing.Point(0, 0);
             this.ItemForTen.Name = "ItemForTen";
             this.ItemForTen.Size = new System.Drawing.Size(796, 24);
-            this.ItemForTen.Text = "Ten";
-            this.ItemForTen.TextSize = new System.Drawing.Size(65, 13);
+            this.ItemForTen.Text = "Tên";
+            this.ItemForTen.TextSize = new System.Drawing.Size(62, 13);
             // 
             // ItemForNgaySinh
             // 
@@ -431,8 +431,8 @@ namespace QuanLiHocThem
             this.ItemForNgaySinh.Location = new System.Drawing.Point(0, 24);
             this.ItemForNgaySinh.Name = "ItemForNgaySinh";
             this.ItemForNgaySinh.Size = new System.Drawing.Size(398, 24);
-            this.ItemForNgaySinh.Text = "Ngay Sinh";
-            this.ItemForNgaySinh.TextSize = new System.Drawing.Size(65, 13);
+            this.ItemForNgaySinh.Text = "Ngày sinh";
+            this.ItemForNgaySinh.TextSize = new System.Drawing.Size(62, 13);
             // 
             // ItemForDiaChi
             // 
@@ -440,8 +440,8 @@ namespace QuanLiHocThem
             this.ItemForDiaChi.Location = new System.Drawing.Point(0, 48);
             this.ItemForDiaChi.Name = "ItemForDiaChi";
             this.ItemForDiaChi.Size = new System.Drawing.Size(398, 24);
-            this.ItemForDiaChi.Text = "Dia Chi";
-            this.ItemForDiaChi.TextSize = new System.Drawing.Size(65, 13);
+            this.ItemForDiaChi.Text = "Địa chỉ";
+            this.ItemForDiaChi.TextSize = new System.Drawing.Size(62, 13);
             // 
             // layoutControlItem1
             // 
@@ -458,8 +458,8 @@ namespace QuanLiHocThem
             this.ItemForGioiTinh.Location = new System.Drawing.Point(398, 24);
             this.ItemForGioiTinh.Name = "ItemForGioiTinh";
             this.ItemForGioiTinh.Size = new System.Drawing.Size(398, 24);
-            this.ItemForGioiTinh.Text = "Gioi Tinh";
-            this.ItemForGioiTinh.TextSize = new System.Drawing.Size(65, 13);
+            this.ItemForGioiTinh.Text = "Giới tính";
+            this.ItemForGioiTinh.TextSize = new System.Drawing.Size(62, 13);
             // 
             // ItemForSoDienThoai
             // 
@@ -467,10 +467,10 @@ namespace QuanLiHocThem
             this.ItemForSoDienThoai.Location = new System.Drawing.Point(398, 48);
             this.ItemForSoDienThoai.Name = "ItemForSoDienThoai";
             this.ItemForSoDienThoai.Size = new System.Drawing.Size(398, 24);
-            this.ItemForSoDienThoai.Text = "So Dien Thoai";
-            this.ItemForSoDienThoai.TextSize = new System.Drawing.Size(65, 13);
+            this.ItemForSoDienThoai.Text = "Số điện thoại";
+            this.ItemForSoDienThoai.TextSize = new System.Drawing.Size(62, 13);
             // 
-            // frmMain
+            // frmAdminStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -481,7 +481,7 @@ namespace QuanLiHocThem
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMain";
+            this.Name = "frmAdminStudent";
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

@@ -96,6 +96,18 @@
     <Compile Include="DiemDanh.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="frmQuanLiBuoiHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLiBuoiHoc.Designer.cs">
+      <DependentUpon>frmQuanLiBuoiHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLiLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLiLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLiLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\frmAdminTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +184,12 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmQuanLiBuoiHoc.resx">
+      <DependentUpon>frmQuanLiBuoiHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLiLopHoc.resx">
+      <DependentUpon>frmQuanLiLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminTeacher.resx">
       <DependentUpon>frmAdminTeacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +220,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BuoiHoc.datasource" />
+    <None Include="Properties\DataSources\CaHoc.datasource" />
     <None Include="Properties\DataSources\GiaoVien.datasource" />
     <None Include="Properties\DataSources\GiaoVien.xsc">
       <DependentUpon>GiaoVien.xsd</DependentUpon>
@@ -215,6 +235,7 @@
       <DependentUpon>GiaoVien.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\HocSinh.datasource" />
+    <None Include="Properties\DataSources\LopHoc.datasource" />
     <None Include="Properties\DataSources\MonHoc.datasource" />
     <None Include="Properties\DataSources\MucThanhToan.datasource" />
     <None Include="Properties\Settings.settings">

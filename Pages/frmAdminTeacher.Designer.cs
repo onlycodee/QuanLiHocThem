@@ -52,6 +52,7 @@ namespace QuanLiHocThem
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -85,7 +86,6 @@ namespace QuanLiHocThem
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBS)).BeginInit();
@@ -321,6 +321,14 @@ namespace QuanLiHocThem
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(994, 183);
             this.panelControl2.TabIndex = 20;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(469, 8);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(96, 13);
+            this.labelControl10.TabIndex = 20;
+            this.labelControl10.Text = "Danh sách giáo viên";
             // 
             // textEdit6
             // 
@@ -630,14 +638,6 @@ namespace QuanLiHocThem
             this.barButtonItem4.Id = 3;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(469, 8);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(96, 13);
-            this.labelControl10.TabIndex = 20;
-            this.labelControl10.Text = "Danh sách giáo viên";
             // 
             // frmAdminTeacher
             // 

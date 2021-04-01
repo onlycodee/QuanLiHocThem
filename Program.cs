@@ -16,7 +16,7 @@ namespace QuanLiHocThem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainAdmin());
+            Application.Run(new frmQuanLiLopHoc());
         }
     }
 }
