@@ -52,11 +52,11 @@ namespace QuanLiHocThem
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.tbSubject = new System.Windows.Forms.TextBox();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -100,7 +100,6 @@ namespace QuanLiHocThem
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
@@ -288,8 +287,8 @@ namespace QuanLiHocThem
             // 
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Controls.Add(this.panelControl3);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 2);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(998, 232);
             this.panelControl1.TabIndex = 15;
@@ -297,11 +296,11 @@ namespace QuanLiHocThem
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.tbSubject);
             this.panelControl2.Controls.Add(this.labelControl10);
             this.panelControl2.Controls.Add(this.textEdit6);
             this.panelControl2.Controls.Add(this.dateEdit1);
             this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Controls.Add(this.textEdit4);
             this.panelControl2.Controls.Add(this.textEdit1);
             this.panelControl2.Controls.Add(this.textEdit8);
             this.panelControl2.Controls.Add(this.labelControl2);
@@ -321,6 +320,13 @@ namespace QuanLiHocThem
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(994, 183);
             this.panelControl2.TabIndex = 20;
+            // 
+            // tbSubject
+            // 
+            this.tbSubject.Location = new System.Drawing.Point(453, 119);
+            this.tbSubject.Name = "tbSubject";
+            this.tbSubject.Size = new System.Drawing.Size(149, 21);
+            this.tbSubject.TabIndex = 21;
             // 
             // labelControl10
             // 
@@ -361,15 +367,6 @@ namespace QuanLiHocThem
             this.labelControl1.Size = new System.Drawing.Size(64, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên giáo viên";
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.monHocBS, "Ten", true));
-            this.textEdit4.Location = new System.Drawing.Point(453, 116);
-            this.textEdit4.MenuManager = this.barManager1;
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(149, 20);
-            this.textEdit4.TabIndex = 18;
             // 
             // textEdit1
             // 
@@ -504,15 +501,15 @@ namespace QuanLiHocThem
             this.panelControl3.Controls.Add(this.btnCancel);
             this.panelControl3.Controls.Add(this.btnDelete);
             this.panelControl3.Controls.Add(this.btnSave);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(2, 2);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl3.Location = new System.Drawing.Point(2, 184);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(994, 228);
+            this.panelControl3.Size = new System.Drawing.Size(994, 46);
             this.panelControl3.TabIndex = 21;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(244, 189);
+            this.btnAdd.Location = new System.Drawing.Point(242, 7);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 4;
@@ -521,7 +518,7 @@ namespace QuanLiHocThem
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(625, 189);
+            this.btnCancel.Location = new System.Drawing.Point(628, 7);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
@@ -530,7 +527,7 @@ namespace QuanLiHocThem
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(501, 189);
+            this.btnDelete.Location = new System.Drawing.Point(509, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 2;
@@ -539,7 +536,7 @@ namespace QuanLiHocThem
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(372, 189);
+            this.btnSave.Location = new System.Drawing.Point(378, 7);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 1;
@@ -673,7 +670,6 @@ namespace QuanLiHocThem
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
@@ -727,7 +723,6 @@ namespace QuanLiHocThem
         private System.Windows.Forms.BindingSource giaoVienBS;
         private System.Windows.Forms.BindingSource monHocBS;
         private System.Windows.Forms.BindingSource mucThanhToanBS;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl3;
@@ -746,5 +741,6 @@ namespace QuanLiHocThem
         private System.Windows.Forms.DataGridViewComboBoxColumn maMonHocDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn maMucThanhToanDataGridViewTextBoxColumn;
         private DevExpress.XtraEditors.LabelControl labelControl10;
+        private System.Windows.Forms.TextBox tbSubject;
     }
 }

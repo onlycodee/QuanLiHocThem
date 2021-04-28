@@ -23,18 +23,39 @@ namespace QuanLiHocThem
 
         private void frmQuanLiBuoiHoc_Load(object sender, EventArgs e)
         {
-            //Console.WriteLine("sal;fjsll");
-            //bindingSource1.DataSource = db.DiemDanhs.Where(dd => dd.MaBuoiHoc == _maBuoiHoc)
-            //    .Select(bh => new
-            //    {
-            //        bh.HocSinh.Ten,
-            //        bh.HocSinh.NgaySinh,
-            //        bh.HocSinh.GioiTinh,
-            //        bh.HocSinh.SoDienThoai,
-            //        DiemDanh = bh.DaDiemDanh,
-            //        bh.BuoiHoc.NgayHoc
-            //    }).ToList();
-            hocSinhBindingSource.DataSource = db.HocSinhs.ToList();
+            BoundDataSource();
+            //hocSinhBindingSource.DataSource = db.HocSinhs.ToList();
+        }
+
+        private void BoundDataSource()
+        {
+            dgvContent.DataSource = db.DiemDanhs.Where(dd => dd.MaBuoiHoc == _maBuoiHoc)
+                .Select(bh => new
+                {
+                    MaBuoiHoc = bh.BuoiHoc.Ma,
+                    MaHocSinh = bh.HocSinh.Ma,
+                    TenHocSinh = bh.HocSinh.Ten,
+                    DaDiemDanh = bh.DaDiemDanh,
+                    NgayHoc = bh.BuoiHoc.NgayHoc,
+                    CaHoc = bh.BuoiHoc.CaHoc.Ten,
+                    BuoiHocThu = bh.BuoiHoc.SoThuTu,
+                    TenMonHoc = bh.BuoiHoc.LopHoc.MonHoc.Ten,
+                    NgaySinh = bh.HocSinh.NgaySinh,
+                    DiaChi = bh.HocSinh.DiaChi
+                }).ToList();
+        }
+
+        private void dgvContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvContent.Columns[e.ColumnIndex].Name == "DiemDanh")
+            {
+                //Console.WriteLine("Hoc sinh: " + dgvContent.Rows[e.RowIndex].Cells[2].Value.ToString());
+                int maHocSinh = int.Parse(dgvContent.Rows[e.RowIndex].Cells[2].Value.ToString());
+                DiemDanh diemDanh = db.DiemDanhs.Where(dd => dd.MaBuoiHoc == _maBuoiHoc && dd.MaHocSinh == maHocSinh).FirstOrDefault();
+                diemDanh.DaDiemDanh = !diemDanh.DaDiemDanh;
+                db.SaveChanges();
+                BoundDataSource();
+            }
         }
     }
 }

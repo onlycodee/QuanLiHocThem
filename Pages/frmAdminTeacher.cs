@@ -45,8 +45,11 @@ namespace QuanLiHocThem
         }
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0 || e.ColumnIndex > 9) return;
+            var subjectCBO = 
+                dgvGiaoVien.Rows[e.RowIndex].Cells[8] as System.Windows.Forms.DataGridViewComboBoxCell;
+            tbSubject.Text = db.MonHocs.Where(mh => mh.Ma.ToString() == subjectCBO.Value.ToString()).FirstOrDefault().Ten;
             if (dtp != null) dtp.Visible = false;
-            Console.WriteLine("Index: " + e.ColumnIndex);
             if (e.ColumnIndex >= 0 && dgvGiaoVien.Columns[e.ColumnIndex].DataPropertyName == nameof(GiaoVien.NgaySinh))
             {
                 // initialize DateTimePicker
@@ -104,7 +107,6 @@ namespace QuanLiHocThem
 
         private void dgvGiaoVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)

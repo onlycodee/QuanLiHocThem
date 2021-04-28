@@ -31,10 +31,10 @@ namespace QuanLiHocThem
         {
             this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.dgvContent = new System.Windows.Forms.DataGridView();
             this.ChiTiet = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.maDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maLopHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +59,18 @@ namespace QuanLiHocThem
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(946, 91);
+            this.panelControl1.Size = new System.Drawing.Size(950, 91);
             this.panelControl1.TabIndex = 0;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(414, 31);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(169, 33);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Lich giang day";
             // 
             // panelControl2
             // 
@@ -68,7 +78,7 @@ namespace QuanLiHocThem
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 91);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(946, 563);
+            this.panelControl2.Size = new System.Drawing.Size(950, 563);
             this.panelControl2.TabIndex = 1;
             // 
             // dgvContent
@@ -88,7 +98,7 @@ namespace QuanLiHocThem
             this.dgvContent.GridColor = System.Drawing.Color.LightGray;
             this.dgvContent.Location = new System.Drawing.Point(2, 2);
             this.dgvContent.Name = "dgvContent";
-            this.dgvContent.Size = new System.Drawing.Size(942, 559);
+            this.dgvContent.Size = new System.Drawing.Size(946, 559);
             this.dgvContent.TabIndex = 0;
             this.dgvContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -100,16 +110,6 @@ namespace QuanLiHocThem
             this.ChiTiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ChiTiet.Text = "Chi tiet";
             this.ChiTiet.UseColumnTextForButtonValue = true;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(414, 31);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(169, 33);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Lich giang day";
             // 
             // maDataGridViewTextBoxColumn
             // 
@@ -162,7 +162,7 @@ namespace QuanLiHocThem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 654);
+            this.ClientSize = new System.Drawing.Size(950, 654);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmQuanLiLopHoc";

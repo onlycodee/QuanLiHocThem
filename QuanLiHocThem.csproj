@@ -108,6 +108,12 @@
     <Compile Include="frmQuanLiLopHoc.Designer.cs">
       <DependentUpon>frmQuanLiLopHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\frmAdminClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\frmAdminClass.Designer.cs">
+      <DependentUpon>frmAdminClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\frmAdminTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <EmbeddedResource Include="frmQuanLiLopHoc.resx">
       <DependentUpon>frmQuanLiLopHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\frmAdminClass.resx">
+      <DependentUpon>frmAdminClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminTeacher.resx">
       <DependentUpon>frmAdminTeacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +231,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BuoiHoc.datasource" />
     <None Include="Properties\DataSources\CaHoc.datasource" />
+    <None Include="Properties\DataSources\DiemDanh.datasource" />
     <None Include="Properties\DataSources\GiaoVien.datasource" />
     <None Include="Properties\DataSources\GiaoVien.xsc">
       <DependentUpon>GiaoVien.xsd</DependentUpon>
