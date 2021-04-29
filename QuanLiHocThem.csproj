@@ -245,8 +245,10 @@
       <DependentUpon>GiaoVien.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\HocSinh.datasource" />
+    <None Include="Properties\DataSources\KhoaHoc.datasource" />
     <None Include="Properties\DataSources\LopHoc.datasource" />
     <None Include="Properties\DataSources\MonHoc.datasource" />
+    <None Include="Properties\DataSources\MucHocPhi.datasource" />
     <None Include="Properties\DataSources\MucThanhToan.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
