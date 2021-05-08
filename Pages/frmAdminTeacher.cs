@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using DevExpress.XtraEditors;
 using System.Data.Entity.Infrastructure;
+using QuanLiHocThem.Pages;
 
 namespace QuanLiHocThem
 {

@@ -48,6 +48,8 @@ namespace QuanLiHocThem
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDiemDanhTatCa = new System.Windows.Forms.Button();
+            this.btnDatLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -60,11 +62,13 @@ namespace QuanLiHocThem
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btnDatLai);
+            this.panelControl1.Controls.Add(this.btnDiemDanhTatCa);
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1045, 120);
+            this.panelControl1.Size = new System.Drawing.Size(1045, 126);
             this.panelControl1.TabIndex = 0;
             // 
             // labelControl1
@@ -187,6 +191,28 @@ namespace QuanLiHocThem
             // 
             this.bindingSource2.DataSource = typeof(QuanLiHocThem.DiemDanh);
             // 
+            // btnDiemDanhTatCa
+            // 
+            this.btnDiemDanhTatCa.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnDiemDanhTatCa.Location = new System.Drawing.Point(38, 59);
+            this.btnDiemDanhTatCa.Name = "btnDiemDanhTatCa";
+            this.btnDiemDanhTatCa.Size = new System.Drawing.Size(123, 33);
+            this.btnDiemDanhTatCa.TabIndex = 1;
+            this.btnDiemDanhTatCa.Text = "Diem danh tat ca";
+            this.btnDiemDanhTatCa.UseVisualStyleBackColor = true;
+            this.btnDiemDanhTatCa.Click += new System.EventHandler(this.btnDiemDanhTatCa_Click);
+            // 
+            // btnDatLai
+            // 
+            this.btnDatLai.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnDatLai.Location = new System.Drawing.Point(194, 59);
+            this.btnDatLai.Name = "btnDatLai";
+            this.btnDatLai.Size = new System.Drawing.Size(123, 33);
+            this.btnDatLai.TabIndex = 2;
+            this.btnDatLai.Text = "Dat lai";
+            this.btnDatLai.UseVisualStyleBackColor = true;
+            this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
+            // 
             // frmQuanLiBuoiHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,5 +257,7 @@ namespace QuanLiHocThem
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewButtonColumn DiemDanh;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.Button btnDatLai;
+        private System.Windows.Forms.Button btnDiemDanhTatCa;
     }
 }

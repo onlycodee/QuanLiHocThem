@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiHocThem.Pages;
 
 namespace QuanLiHocThem
 {
@@ -47,5 +48,11 @@ namespace QuanLiHocThem
 
         }
 
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            pnlContent.Controls.Add(frmAdminClass.Instance);
+            frmAdminClass.Instance.Show();
+        }
     }
 }

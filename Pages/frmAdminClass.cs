@@ -17,6 +17,17 @@ namespace QuanLiHocThem.Pages
         public frmAdminClass()
         {
             InitializeComponent();
+            Dock = DockStyle.Fill;
+            TopLevel = false;
+            FormBorderStyle = FormBorderStyle.None;
+        }
+        private static readonly Lazy<frmAdminClass> lazy = new Lazy<frmAdminClass>(() => new frmAdminClass());
+        public static frmAdminClass Instance
+        {
+            get
+            {
+                return lazy.Value;
+            }
         }
         private void BoundDataSource()
         {

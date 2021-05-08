@@ -37,6 +37,7 @@ namespace QuanLiHocThem
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -69,9 +70,10 @@ namespace QuanLiHocThem
             this.barButtonItem4,
             this.barButtonItem5,
             this.barButtonItem6,
-            this.barButtonItem7});
+            this.barButtonItem7,
+            this.barButtonItem8});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -80,7 +82,7 @@ namespace QuanLiHocThem
             this.ribbonPage4,
             this.ribbonPage5,
             this.ribbonPage6});
-            this.ribbonControl1.Size = new System.Drawing.Size(886, 134);
+            this.ribbonControl1.Size = new System.Drawing.Size(971, 134);
             // 
             // barButtonItem1
             // 
@@ -127,6 +129,13 @@ namespace QuanLiHocThem
             this.barButtonItem7.Caption = "barButtonItem7";
             this.barButtonItem7.Id = 7;
             this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "Danh sách lớp học";
+            this.barButtonItem8.Id = 8;
+            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -180,10 +189,11 @@ namespace QuanLiHocThem
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3});
             this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Môn học";
+            this.ribbonPage3.Text = "Lớp học";
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Quản lí chung";
             // 
@@ -228,14 +238,14 @@ namespace QuanLiHocThem
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 134);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(886, 481);
+            this.pnlContent.Size = new System.Drawing.Size(971, 481);
             this.pnlContent.TabIndex = 3;
             // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 615);
+            this.ClientSize = new System.Drawing.Size(971, 615);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "frmMainAdmin";
@@ -275,5 +285,6 @@ namespace QuanLiHocThem
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
     }
 }

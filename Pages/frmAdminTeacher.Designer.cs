@@ -287,10 +287,10 @@ namespace QuanLiHocThem
             // 
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Controls.Add(this.panelControl3);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(998, 232);
+            this.panelControl1.Size = new System.Drawing.Size(998, 234);
             this.panelControl1.TabIndex = 15;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
@@ -315,10 +315,10 @@ namespace QuanLiHocThem
             this.panelControl2.Controls.Add(this.labelControl7);
             this.panelControl2.Controls.Add(this.textEdit5);
             this.panelControl2.Controls.Add(this.labelControl4);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(994, 183);
+            this.panelControl2.Size = new System.Drawing.Size(994, 190);
             this.panelControl2.TabIndex = 20;
             // 
             // tbSubject
@@ -502,9 +502,9 @@ namespace QuanLiHocThem
             this.panelControl3.Controls.Add(this.btnDelete);
             this.panelControl3.Controls.Add(this.btnSave);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(2, 184);
+            this.panelControl3.Location = new System.Drawing.Point(2, 192);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(994, 46);
+            this.panelControl3.Size = new System.Drawing.Size(994, 40);
             this.panelControl3.TabIndex = 21;
             // 
             // btnAdd

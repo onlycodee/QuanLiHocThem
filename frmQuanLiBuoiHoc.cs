@@ -57,5 +57,27 @@ namespace QuanLiHocThem
                 BoundDataSource();
             }
         }
+
+        private void btnDiemDanhTatCa_Click(object sender, EventArgs e)
+        {
+            SetDiemDanhState(true);
+        }
+
+        private void SetDiemDanhState(bool state)
+        {
+            List<DiemDanh> diemDanhs =
+                db.DiemDanhs.Where(dd => dd.MaBuoiHoc == _maBuoiHoc).ToList();
+            for (int i = 0; i < diemDanhs.Count; i++)
+            {
+                diemDanhs[i].DaDiemDanh = state;
+            }
+            db.SaveChanges();
+            BoundDataSource();
+        }
+
+        private void btnDatLai_Click(object sender, EventArgs e)
+        {
+            SetDiemDanhState(false);
+        }
     }
 }
