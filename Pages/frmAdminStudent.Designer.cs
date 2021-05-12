@@ -41,6 +41,7 @@ namespace QuanLiHocThem
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.dataLayoutControl = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
@@ -110,8 +111,9 @@ namespace QuanLiHocThem
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
-            this.barButtonItem4});
-            this.barManager1.MaxItemId = 4;
+            this.barButtonItem4,
+            this.barButtonItem5});
+            this.barManager1.MaxItemId = 5;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -198,6 +200,12 @@ namespace QuanLiHocThem
             this.barDockControlRight.Location = new System.Drawing.Point(816, 26);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 426);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "barButtonItem5";
+            this.barButtonItem5.Id = 4;
+            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // dataLayoutControl
             // 
@@ -351,6 +359,7 @@ namespace QuanLiHocThem
             this.NgaySinhDateEdit.Size = new System.Drawing.Size(329, 20);
             this.NgaySinhDateEdit.StyleController = this.dataLayoutControl;
             this.NgaySinhDateEdit.TabIndex = 6;
+            this.NgaySinhDateEdit.EditValueChanged += new System.EventHandler(this.NgaySinhDateEdit_EditValueChanged);
             // 
             // GioiTinhTextEdit
             // 
@@ -555,5 +564,6 @@ namespace QuanLiHocThem
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
     }
 }

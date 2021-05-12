@@ -83,5 +83,10 @@ namespace QuanLiHocThem
             }
             hocSinhBindingSource.ResetBindings(false);
         }
+
+        private void NgaySinhDateEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

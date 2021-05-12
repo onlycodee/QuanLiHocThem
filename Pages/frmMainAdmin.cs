@@ -51,6 +51,7 @@ namespace QuanLiHocThem
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             pnlContent.Controls.Clear();
+            frmAdminClass.Instance.TopLevel = false;
             pnlContent.Controls.Add(frmAdminClass.Instance);
             frmAdminClass.Instance.Show();
         }

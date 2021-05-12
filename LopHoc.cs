@@ -29,6 +29,7 @@ namespace QuanLiHocThem
         public Nullable<int> MaGiaoVien { get; set; }
         public Nullable<int> MaKhoaHoc { get; set; }
         public Nullable<int> MaMucHocPhi { get; set; }
+        public Nullable<int> TongSoBuoi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BienLaiThuHocPhi> BienLaiThuHocPhis { get; set; }

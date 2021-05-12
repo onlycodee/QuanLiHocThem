@@ -280,7 +280,7 @@ namespace QuanLiHocThem
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(998, 321);
             this.groupControl1.TabIndex = 14;
-            this.groupControl1.Text = "Danh sach giao vien";
+            this.groupControl1.Text = "Chi tiet";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // panelControl1
@@ -358,6 +358,7 @@ namespace QuanLiHocThem
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Size = new System.Drawing.Size(179, 20);
             this.dateEdit1.TabIndex = 19;
+            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
             // 
             // labelControl1
             // 

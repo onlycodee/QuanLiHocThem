@@ -46,8 +46,6 @@ namespace QuanLiHocThem.Pages
             this.khoaHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboMonHoc = new System.Windows.Forms.ComboBox();
             this.monHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.tbMa = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -68,6 +66,7 @@ namespace QuanLiHocThem.Pages
             this.GiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HocPhiMotBuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MucHocPhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiTiet = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -112,6 +111,7 @@ namespace QuanLiHocThem.Pages
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Huy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXoa
             // 
@@ -120,6 +120,7 @@ namespace QuanLiHocThem.Pages
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xoa ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // simpleButton2
             // 
@@ -146,8 +147,6 @@ namespace QuanLiHocThem.Pages
             this.panelControl3.Controls.Add(this.cboGiaoVien);
             this.panelControl3.Controls.Add(this.cboKhoaHoc);
             this.panelControl3.Controls.Add(this.cboMonHoc);
-            this.panelControl3.Controls.Add(this.labelControl9);
-            this.panelControl3.Controls.Add(this.tbMa);
             this.panelControl3.Controls.Add(this.labelControl1);
             this.panelControl3.Controls.Add(this.labelControl2);
             this.panelControl3.Controls.Add(this.labelControl8);
@@ -166,7 +165,7 @@ namespace QuanLiHocThem.Pages
             // 
             // tbHocPhi1Buoi
             // 
-            this.tbHocPhi1Buoi.Location = new System.Drawing.Point(111, 134);
+            this.tbHocPhi1Buoi.Location = new System.Drawing.Point(124, 92);
             this.tbHocPhi1Buoi.Name = "tbHocPhi1Buoi";
             this.tbHocPhi1Buoi.Size = new System.Drawing.Size(192, 21);
             this.tbHocPhi1Buoi.TabIndex = 23;
@@ -176,7 +175,7 @@ namespace QuanLiHocThem.Pages
             this.cboMucHocPhi.DataSource = this.mucHocPhiBindingSource;
             this.cboMucHocPhi.DisplayMember = "SoHocPhi";
             this.cboMucHocPhi.FormattingEnabled = true;
-            this.cboMucHocPhi.Location = new System.Drawing.Point(754, 89);
+            this.cboMucHocPhi.Location = new System.Drawing.Point(752, 92);
             this.cboMucHocPhi.Name = "cboMucHocPhi";
             this.cboMucHocPhi.Size = new System.Drawing.Size(192, 21);
             this.cboMucHocPhi.TabIndex = 22;
@@ -191,7 +190,7 @@ namespace QuanLiHocThem.Pages
             this.cboGiaoVien.DataSource = this.giaoVienBindingSource;
             this.cboGiaoVien.DisplayMember = "Ten";
             this.cboGiaoVien.FormattingEnabled = true;
-            this.cboGiaoVien.Location = new System.Drawing.Point(424, 91);
+            this.cboGiaoVien.Location = new System.Drawing.Point(437, 93);
             this.cboGiaoVien.Name = "cboGiaoVien";
             this.cboGiaoVien.Size = new System.Drawing.Size(192, 21);
             this.cboGiaoVien.TabIndex = 20;
@@ -206,7 +205,7 @@ namespace QuanLiHocThem.Pages
             this.cboKhoaHoc.DataSource = this.khoaHocBindingSource;
             this.cboKhoaHoc.DisplayMember = "Ten";
             this.cboKhoaHoc.FormattingEnabled = true;
-            this.cboKhoaHoc.Location = new System.Drawing.Point(424, 54);
+            this.cboKhoaHoc.Location = new System.Drawing.Point(437, 56);
             this.cboKhoaHoc.Name = "cboKhoaHoc";
             this.cboKhoaHoc.Size = new System.Drawing.Size(192, 21);
             this.cboKhoaHoc.TabIndex = 19;
@@ -221,7 +220,7 @@ namespace QuanLiHocThem.Pages
             this.cboMonHoc.DataSource = this.monHocBindingSource;
             this.cboMonHoc.DisplayMember = "Ten";
             this.cboMonHoc.FormattingEnabled = true;
-            this.cboMonHoc.Location = new System.Drawing.Point(754, 45);
+            this.cboMonHoc.Location = new System.Drawing.Point(752, 56);
             this.cboMonHoc.Name = "cboMonHoc";
             this.cboMonHoc.Size = new System.Drawing.Size(192, 21);
             this.cboMonHoc.TabIndex = 18;
@@ -230,22 +229,6 @@ namespace QuanLiHocThem.Pages
             // monHocBindingSource
             // 
             this.monHocBindingSource.DataSource = typeof(QuanLiHocThem.MonHoc);
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(29, 53);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(51, 13);
-            this.labelControl9.TabIndex = 16;
-            this.labelControl9.Text = "Ma lop hoc";
-            // 
-            // tbMa
-            // 
-            this.tbMa.Location = new System.Drawing.Point(111, 50);
-            this.tbMa.Name = "tbMa";
-            this.tbMa.ReadOnly = true;
-            this.tbMa.Size = new System.Drawing.Size(192, 21);
-            this.tbMa.TabIndex = 17;
             // 
             // labelControl1
             // 
@@ -259,7 +242,7 @@ namespace QuanLiHocThem.Pages
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(354, 136);
+            this.labelControl2.Location = new System.Drawing.Point(367, 138);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(49, 13);
             this.labelControl2.TabIndex = 1;
@@ -267,7 +250,7 @@ namespace QuanLiHocThem.Pages
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(17, 137);
+            this.labelControl8.Location = new System.Drawing.Point(30, 95);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(79, 13);
             this.labelControl8.TabIndex = 14;
@@ -275,7 +258,7 @@ namespace QuanLiHocThem.Pages
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(29, 92);
+            this.labelControl3.Location = new System.Drawing.Point(30, 58);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(54, 13);
             this.labelControl3.TabIndex = 3;
@@ -284,7 +267,7 @@ namespace QuanLiHocThem.Pages
             // cbTrangThai
             // 
             this.cbTrangThai.AutoSize = true;
-            this.cbTrangThai.Location = new System.Drawing.Point(418, 136);
+            this.cbTrangThai.Location = new System.Drawing.Point(437, 138);
             this.cbTrangThai.Name = "cbTrangThai";
             this.cbTrangThai.Size = new System.Drawing.Size(81, 17);
             this.cbTrangThai.TabIndex = 13;
@@ -293,14 +276,14 @@ namespace QuanLiHocThem.Pages
             // 
             // tbSoHocSinh
             // 
-            this.tbSoHocSinh.Location = new System.Drawing.Point(111, 89);
+            this.tbSoHocSinh.Location = new System.Drawing.Point(124, 55);
             this.tbSoHocSinh.Name = "tbSoHocSinh";
             this.tbSoHocSinh.Size = new System.Drawing.Size(192, 21);
             this.tbSoHocSinh.TabIndex = 4;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(672, 48);
+            this.labelControl5.Location = new System.Drawing.Point(673, 58);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(40, 13);
             this.labelControl5.TabIndex = 5;
@@ -308,7 +291,7 @@ namespace QuanLiHocThem.Pages
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(660, 93);
+            this.labelControl6.Location = new System.Drawing.Point(673, 95);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(56, 13);
             this.labelControl6.TabIndex = 11;
@@ -316,7 +299,7 @@ namespace QuanLiHocThem.Pages
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(354, 56);
+            this.labelControl4.Location = new System.Drawing.Point(367, 58);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(44, 13);
             this.labelControl4.TabIndex = 7;
@@ -324,7 +307,7 @@ namespace QuanLiHocThem.Pages
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(354, 94);
+            this.labelControl7.Location = new System.Drawing.Point(367, 96);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(44, 13);
             this.labelControl7.TabIndex = 9;
@@ -351,13 +334,15 @@ namespace QuanLiHocThem.Pages
             this.TenKhoaHoc,
             this.GiaoVien,
             this.HocPhiMotBuoi,
-            this.MucHocPhi});
+            this.MucHocPhi,
+            this.ChiTiet});
             this.dgvContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvContent.Location = new System.Drawing.Point(2, 2);
             this.dgvContent.Name = "dgvContent";
             this.dgvContent.Size = new System.Drawing.Size(980, 423);
             this.dgvContent.TabIndex = 0;
             this.dgvContent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellClick);
+            this.dgvContent.EnabledChanged += new System.EventHandler(this.DataGridView_EnabledChanged);
             // 
             // Ma
             // 
@@ -407,6 +392,15 @@ namespace QuanLiHocThem.Pages
             this.MucHocPhi.HeaderText = "Muc hoc phi (%)";
             this.MucHocPhi.Name = "MucHocPhi";
             // 
+            // ChiTiet
+            // 
+            this.ChiTiet.HeaderText = "Chi tiet";
+            this.ChiTiet.Name = "ChiTiet";
+            this.ChiTiet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ChiTiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ChiTiet.Text = "Chi tiet";
+            this.ChiTiet.UseColumnTextForButtonValue = true;
+            // 
             // frmAdminClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,14 +436,6 @@ namespace QuanLiHocThem.Pages
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.DataGridView dgvContent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ma;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn DaKetThuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongHocSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoaHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GiaoVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HocPhiMotBuoi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MucHocPhi;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.CheckBox cbTrangThai;
@@ -465,8 +451,6 @@ namespace QuanLiHocThem.Pages
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private System.Windows.Forms.TextBox tbMa;
         private System.Windows.Forms.ComboBox cboMucHocPhi;
         private System.Windows.Forms.ComboBox cboGiaoVien;
         private System.Windows.Forms.ComboBox cboKhoaHoc;
@@ -476,5 +460,14 @@ namespace QuanLiHocThem.Pages
         private System.Windows.Forms.BindingSource khoaHocBindingSource;
         private System.Windows.Forms.BindingSource monHocBindingSource;
         private System.Windows.Forms.BindingSource mucHocPhiBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ma;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn DaKetThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongHocSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaoVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HocPhiMotBuoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MucHocPhi;
+        private System.Windows.Forms.DataGridViewButtonColumn ChiTiet;
     }
 }

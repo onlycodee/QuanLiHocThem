@@ -101,6 +101,7 @@
           <Property Name="MaGiaoVien" Type="int" />
           <Property Name="MaKhoaHoc" Type="int" />
           <Property Name="MaMucHocPhi" Type="int" />
+          <Property Name="TongSoBuoi" Type="int" />
         </EntityType>
         <EntityType Name="MonHoc">
           <Key>
@@ -500,6 +501,7 @@
           <NavigationProperty Name="KhoaHoc" Relationship="Self.FK__LopHoc__MaKhoaHo__35BCFE0A" FromRole="LopHoc" ToRole="KhoaHoc" />
           <NavigationProperty Name="MonHoc" Relationship="Self.FK__LopHoc__MaMonHoc__36B12243" FromRole="LopHoc" ToRole="MonHoc" />
           <NavigationProperty Name="MucHocPhi" Relationship="Self.FK__LopHoc__MaMucHoc__3B75D760" FromRole="LopHoc" ToRole="MucHocPhi" />
+          <Property Name="TongSoBuoi" Type="Int32" />
         </EntityType>
         <EntityType Name="MonHoc">
           <Key>
@@ -901,6 +903,7 @@
           <EntitySetMapping Name="LopHocs">
             <EntityTypeMapping TypeName="DBModel.LopHoc">
               <MappingFragment StoreEntitySet="LopHoc">
+                <ScalarProperty Name="TongSoBuoi" ColumnName="TongSoBuoi" />
                 <ScalarProperty Name="Ma" ColumnName="Ma" />
                 <ScalarProperty Name="SoLuongHocSinh" ColumnName="SoLuongHocSinh" />
                 <ScalarProperty Name="HocPhiMotBuoi" ColumnName="HocPhiMotBuoi" />

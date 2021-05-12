@@ -245,5 +245,10 @@ namespace QuanLiHocThem
             }
             giaoVienBS.ResetBindings(false);
         }
+
+        private void dateEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,6 +40,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -96,6 +97,18 @@
     <Compile Include="DiemDanh.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\frmAdminClassDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\frmAdminClassDetail.Designer.cs">
+      <DependentUpon>frmAdminClassDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLiBuoiHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,10 +133,10 @@
     <Compile Include="Pages\frmAdminTeacher.Designer.cs">
       <DependentUpon>frmAdminTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainAdmin.cs">
+    <Compile Include="Pages\frmMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMainAdmin.Designer.cs">
+    <Compile Include="Pages\frmMainAdmin.Designer.cs">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\frmAdminStudent.cs">
@@ -190,6 +203,12 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\frmAdminClassDetail.resx">
+      <DependentUpon>frmAdminClassDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLiBuoiHoc.resx">
       <DependentUpon>frmQuanLiBuoiHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,7 +221,7 @@
     <EmbeddedResource Include="Pages\frmAdminTeacher.resx">
       <DependentUpon>frmAdminTeacher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMainAdmin.resx">
+    <EmbeddedResource Include="Pages\frmMainAdmin.resx">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminStudent.resx">

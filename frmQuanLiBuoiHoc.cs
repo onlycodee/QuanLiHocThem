@@ -29,6 +29,7 @@ namespace QuanLiHocThem
 
         private void BoundDataSource()
         {
+            Console.WriteLine("Ma buoi hoc: " + _maBuoiHoc);
             dgvContent.DataSource = db.DiemDanhs.Where(dd => dd.MaBuoiHoc == _maBuoiHoc)
                 .Select(bh => new
                 {
@@ -47,6 +48,7 @@ namespace QuanLiHocThem
 
         private void dgvContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0 || e.RowIndex >= dgvContent.RowCount) return;
             if (dgvContent.Columns[e.ColumnIndex].Name == "DiemDanh")
             {
                 //Console.WriteLine("Hoc sinh: " + dgvContent.Rows[e.RowIndex].Cells[2].Value.ToString());
