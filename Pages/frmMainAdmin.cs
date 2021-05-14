@@ -55,5 +55,13 @@ namespace QuanLiHocThem
             pnlContent.Controls.Add(frmAdminClass.Instance);
             frmAdminClass.Instance.Show();
         }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            frmAdminMTT.Instance.TopLevel = false;
+            pnlContent.Controls.Add(frmAdminMTT.Instance);
+            frmAdminMTT.Instance.Show();
+        }
     }
 }
