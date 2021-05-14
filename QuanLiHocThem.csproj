@@ -127,6 +127,12 @@
     <Compile Include="Pages\frmAdminClass.Designer.cs">
       <DependentUpon>frmAdminClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\frmAdminMHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\frmAdminMHP.Designer.cs">
+      <DependentUpon>frmAdminMHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\frmAdminMTT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminClass.resx">
       <DependentUpon>frmAdminClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\frmAdminMHP.resx">
+      <DependentUpon>frmAdminMHP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminMTT.resx">
       <DependentUpon>frmAdminMTT.cs</DependentUpon>
