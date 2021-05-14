@@ -9,22 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace QuanLiHocThem.Pages
 {
-    public partial class frmAdminMTT : Form
+    public partial class frmAdminKH : Form
     {
         QuanLiHocThemEntities db = new QuanLiHocThemEntities();
-        MucThanhToan curClass = null;
-        public frmAdminMTT()
+        KhoaHoc curClass = null;
+        public frmAdminKH()
         {
             InitializeComponent();
             Dock = DockStyle.Fill;
             TopLevel = false;
             FormBorderStyle = FormBorderStyle.None;
         }
-        private static readonly Lazy<frmAdminMTT> lazy = new Lazy<frmAdminMTT>(() => new frmAdminMTT());
-        public static frmAdminMTT Instance
+        private static readonly Lazy<frmAdminKH> lazy = new Lazy<frmAdminKH>(() => new frmAdminKH());
+        public static frmAdminKH Instance
         {
             get
             {
@@ -33,39 +32,27 @@ namespace QuanLiHocThem.Pages
         }
         private void BoundDataSource()
         {
-            dgvContent.DataSource = db.MucThanhToans
-                .Select(mtt => new
-                {
-                    Ma = mtt.Ma,
-                    TiLePhanTram = mtt.TiLePhanTram,
-                }).ToList();
-
-
-        }
-        void ResetAllTextboxes()
-        {
-            tbMtt.Text = "";
-            BoundDataSource();
-        }
-
-        private void tbMtt_TextChanged(object sender, EventArgs e)
-        {
+            dgvContent.DataSource = db.KhoaHocs
+               .Select(t => new
+               {
+                   Ma = t.Ma,
+                  Ten = t.Ten,
+               }).ToList();
 
         }
-
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             if (curClass == null)
             {
-                MucThanhToan mtt = new MucThanhToan()
+                KhoaHoc kh = new KhoaHoc()
                 {
-                    TiLePhanTram = int.Parse(tbMtt.Text),
+                    Ten = tbKHH.Text,
                 };
-                db.MucThanhToans.Add(mtt);
+                db.KhoaHocs.Add(kh);
             }
             else
             {
-                curClass.TiLePhanTram = int.Parse(tbMtt.Text);
+                curClass.Ten = tbKHH.Text;
             }
             db.SaveChanges();
             BoundDataSource();
@@ -77,11 +64,16 @@ namespace QuanLiHocThem.Pages
             if (curClass != null)
             {
                 //db.LopHocs.Where(lh => lh.Ma == curClass.Ma).FirstOrDefault();
-                db.MucThanhToans.Remove(curClass);
+                db.KhoaHocs.Remove(curClass);
                 db.SaveChanges();
                 curClass = null;
                 BoundDataSource();
             }
+        }
+        void ResetAllTextboxes()
+        {
+            tbKHH.Text = "";
+            BoundDataSource();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -90,35 +82,32 @@ namespace QuanLiHocThem.Pages
             ResetAllTextboxes();
             curClass = null;
         }
-        private void dgvContent_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0 || e.RowIndex >= dgvContent.RowCount) return;
-            var classId = int.Parse(dgvContent.Rows[e.RowIndex].Cells[0].Value.ToString());
-
-            curClass = db.MucThanhToans.Where(mtt => mtt.Ma == classId).FirstOrDefault();
-            tbMtt.Text = curClass.TiLePhanTram.ToString();
-        }
-
-        private void frmAdminMTT_Load(object sender, EventArgs e)
-        {
-            dgvContent.Enabled = true;
-            BoundDataSource();
-        }
-
-        private void dgvContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmAdminMTT_Load_1(object sender, EventArgs e)
-        {
-            dgvContent.Enabled = true;
-            BoundDataSource();
-        }
 
         private void panelControl4_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void dgvContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex < 0 || e.RowIndex >= dgvContent.RowCount) return;
+            var classId = int.Parse(dgvContent.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            curClass = db.KhoaHocs.Where(mtt => mtt.Ma == classId).FirstOrDefault();
+            tbKHH.Text = curClass.Ten.ToString();
+        }
+
+        private void frmAdminKH_Load(object sender, EventArgs e)
+        {
+            dgvContent.Enabled = true;
+            BoundDataSource();
+        }
+
+        private void tbMtt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

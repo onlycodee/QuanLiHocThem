@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLiHocThem.Pages
 {
-    QuanLiHocThemEntities db = new QuanLiHocThemEntities();
-    MucHocPhi curClass = null;
+    
     public partial class frmAdminMHP : Form
     {
+        QuanLiHocThemEntities db = new QuanLiHocThemEntities();
+        MucHocPhi curClass = null;
         public frmAdminMHP()
         {
             InitializeComponent();
@@ -73,6 +74,29 @@ namespace QuanLiHocThem.Pages
                 curClass = null;
                 BoundDataSource();
             }
+        }
+
+        private void frmAdminMHP_Load(object sender, EventArgs e)
+        {
+            BoundDataSource();
+        }
+        void ResetAllTextboxes()
+        {
+            tbMhp.Text = "";
+            BoundDataSource();
+        }
+
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            dgvContent.Enabled = false;
+            ResetAllTextboxes();
+            curClass = null;
+        }
+
+        private void dgvContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

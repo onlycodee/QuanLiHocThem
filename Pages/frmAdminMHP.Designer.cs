@@ -66,6 +66,7 @@ namespace QuanLiHocThem.Pages
             this.dgvContent.Name = "dgvContent";
             this.dgvContent.Size = new System.Drawing.Size(796, 198);
             this.dgvContent.TabIndex = 0;
+            this.dgvContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellContentClick);
             // 
             // panelControl2
             // 
@@ -107,6 +108,7 @@ namespace QuanLiHocThem.Pages
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 13;
             this.simpleButton1.Text = "Reset";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // tbMhp
             // 
@@ -177,6 +179,7 @@ namespace QuanLiHocThem.Pages
             this.Controls.Add(this.panelControl1);
             this.Name = "frmAdminMHP";
             this.Text = "frmAdminMHP";
+            this.Load += new System.EventHandler(this.frmAdminMHP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
