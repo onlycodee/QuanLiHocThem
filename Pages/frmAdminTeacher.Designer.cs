@@ -320,6 +320,7 @@ namespace QuanLiHocThem
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(994, 190);
             this.panelControl2.TabIndex = 20;
+            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
             // tbSubject
             // 
@@ -377,6 +378,7 @@ namespace QuanLiHocThem
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(179, 20);
             this.textEdit1.TabIndex = 1;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // textEdit8
             // 
@@ -431,6 +433,7 @@ namespace QuanLiHocThem
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(179, 20);
             this.textEdit3.TabIndex = 5;
+            this.textEdit3.EditValueChanged += new System.EventHandler(this.textEdit3_EditValueChanged);
             // 
             // labelControl9
             // 

@@ -33,28 +33,28 @@ namespace QuanLiHocThem.Pages
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.dgvContent = new System.Windows.Forms.DataGridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.tbKHH = new System.Windows.Forms.TextBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.mucHocPhiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.giaoVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khoaHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.monHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.tbKHH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mucHocPhiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -65,6 +65,7 @@ namespace QuanLiHocThem.Pages
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(800, 202);
             this.panelControl2.TabIndex = 10;
+            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
             // dgvContent
             // 
@@ -86,51 +87,7 @@ namespace QuanLiHocThem.Pages
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(800, 248);
             this.panelControl1.TabIndex = 9;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(139, 197);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 1;
-            this.simpleButton2.Text = "Luu ";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(220, 197);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xoa ";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(154, 145);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(18, 13);
-            this.labelControl6.TabIndex = 11;
-            this.labelControl6.Text = "Ten";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(178, 79);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(179, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Danh sach khoa hoc";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(301, 197);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 13;
-            this.simpleButton1.Text = "Reset";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // panelControl4
             // 
@@ -154,6 +111,70 @@ namespace QuanLiHocThem.Pages
             this.tbKHH.Name = "tbKHH";
             this.tbKHH.Size = new System.Drawing.Size(192, 21);
             this.tbKHH.TabIndex = 14;
+            this.tbKHH.TextChanged += new System.EventHandler(this.tbKHH_TextChanged);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(301, 197);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 13;
+            this.simpleButton1.Text = "Reset";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(178, 79);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(179, 24);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Danh sach khoa hoc";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(154, 145);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(18, 13);
+            this.labelControl6.TabIndex = 11;
+            this.labelControl6.Text = "Ten";
+            this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(220, 197);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xoa ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(139, 197);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 1;
+            this.simpleButton2.Text = "Luu ";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // mucHocPhiBindingSource
+            // 
+            this.mucHocPhiBindingSource.CurrentChanged += new System.EventHandler(this.mucHocPhiBindingSource_CurrentChanged);
+            // 
+            // giaoVienBindingSource
+            // 
+            this.giaoVienBindingSource.CurrentChanged += new System.EventHandler(this.giaoVienBindingSource_CurrentChanged);
+            // 
+            // khoaHocBindingSource
+            // 
+            this.khoaHocBindingSource.CurrentChanged += new System.EventHandler(this.khoaHocBindingSource_CurrentChanged);
+            // 
+            // monHocBindingSource
+            // 
+            this.monHocBindingSource.CurrentChanged += new System.EventHandler(this.monHocBindingSource_CurrentChanged);
             // 
             // frmAdminKH
             // 
@@ -171,13 +192,13 @@ namespace QuanLiHocThem.Pages
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mucHocPhiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
             this.ResumeLayout(false);
 
         }

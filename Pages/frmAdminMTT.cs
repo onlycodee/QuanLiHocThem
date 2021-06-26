@@ -89,6 +89,9 @@ namespace QuanLiHocThem.Pages
             dgvContent.Enabled = false;
             ResetAllTextboxes();
             curClass = null;
+            db.SaveChanges();
+            BoundDataSource();
+            dgvContent.Enabled = true;
         }
         private void dgvContent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -117,6 +120,46 @@ namespace QuanLiHocThem.Pages
         }
 
         private void panelControl4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void mucHocPhiBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void giaoVienBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void khoaHocBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monHocBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

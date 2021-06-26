@@ -343,6 +343,7 @@ namespace QuanLiHocThem
             this.TenTextEdit.Size = new System.Drawing.Size(727, 20);
             this.TenTextEdit.StyleController = this.dataLayoutControl;
             this.TenTextEdit.TabIndex = 5;
+            this.TenTextEdit.EditValueChanged += new System.EventHandler(this.TenTextEdit_EditValueChanged);
             // 
             // NgaySinhDateEdit
             // 

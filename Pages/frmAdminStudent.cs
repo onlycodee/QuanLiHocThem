@@ -88,5 +88,10 @@ namespace QuanLiHocThem
         {
 
         }
+
+        private void TenTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

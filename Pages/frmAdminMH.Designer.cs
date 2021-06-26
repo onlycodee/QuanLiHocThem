@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLiHocThem.Pages
 {
-    partial class frmAdminMTT
+    partial class frmAdminMH
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,13 @@ namespace QuanLiHocThem.Pages
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.tbMtt = new System.Windows.Forms.TextBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.tbSLGV = new System.Windows.Forms.TextBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.tbTMH = new System.Windows.Forms.TextBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.dgvContent = new System.Windows.Forms.DataGridView();
@@ -44,6 +45,7 @@ namespace QuanLiHocThem.Pages
             this.giaoVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khoaHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.monHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -57,13 +59,24 @@ namespace QuanLiHocThem.Pages
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(286, 197);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xoa ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // panelControl4
             // 
             this.panelControl4.AutoSize = true;
+            this.panelControl4.Controls.Add(this.labelControl3);
+            this.panelControl4.Controls.Add(this.labelControl2);
+            this.panelControl4.Controls.Add(this.tbSLGV);
             this.panelControl4.Controls.Add(this.simpleButton1);
-            this.panelControl4.Controls.Add(this.tbMtt);
+            this.panelControl4.Controls.Add(this.tbTMH);
             this.panelControl4.Controls.Add(this.labelControl1);
-            this.panelControl4.Controls.Add(this.labelControl6);
             this.panelControl4.Controls.Add(this.btnXoa);
             this.panelControl4.Controls.Add(this.simpleButton2);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -73,55 +86,52 @@ namespace QuanLiHocThem.Pages
             this.panelControl4.TabIndex = 17;
             this.panelControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl4_Paint);
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(96, 151);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(92, 13);
+            this.labelControl2.TabIndex = 15;
+            this.labelControl2.Text = "Số Lượng Giáo Viên";
+            // 
+            // tbSLGV
+            // 
+            this.tbSLGV.Location = new System.Drawing.Point(225, 148);
+            this.tbSLGV.Name = "tbSLGV";
+            this.tbSLGV.Size = new System.Drawing.Size(192, 21);
+            this.tbSLGV.TabIndex = 14;
+            // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(301, 197);
+            this.simpleButton1.Location = new System.Drawing.Point(382, 197);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 13;
             this.simpleButton1.Text = "Reset";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // tbMtt
+            // tbTMH
             // 
-            this.tbMtt.Location = new System.Drawing.Point(178, 142);
-            this.tbMtt.Name = "tbMtt";
-            this.tbMtt.Size = new System.Drawing.Size(192, 21);
-            this.tbMtt.TabIndex = 12;
-            this.tbMtt.TextChanged += new System.EventHandler(this.tbMtt_TextChanged);
+            this.tbTMH.Location = new System.Drawing.Point(225, 109);
+            this.tbTMH.Name = "tbTMH";
+            this.tbTMH.Size = new System.Drawing.Size(192, 21);
+            this.tbTMH.TabIndex = 12;
+            this.tbTMH.Click += new System.EventHandler(this.tbTMH_Click);
+            this.tbTMH.TextChanged += new System.EventHandler(this.tbTMH_TextChanged);
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(178, 79);
+            this.labelControl1.Location = new System.Drawing.Point(300, 53);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(239, 24);
+            this.labelControl1.Size = new System.Drawing.Size(77, 24);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Danh sach muc thanh toan";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(95, 145);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(77, 13);
-            this.labelControl6.TabIndex = 11;
-            this.labelControl6.Text = "Ty le pham tram";
-            this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(220, 197);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xoa ";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.labelControl1.Text = "Mon Hoc";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(139, 197);
+            this.simpleButton2.Location = new System.Drawing.Point(189, 197);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 1;
@@ -135,8 +145,7 @@ namespace QuanLiHocThem.Pages
             this.panelControl2.Location = new System.Drawing.Point(0, 248);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(800, 202);
-            this.panelControl2.TabIndex = 8;
-            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
+            this.panelControl2.TabIndex = 10;
             // 
             // dgvContent
             // 
@@ -147,7 +156,6 @@ namespace QuanLiHocThem.Pages
             this.dgvContent.Name = "dgvContent";
             this.dgvContent.Size = new System.Drawing.Size(796, 198);
             this.dgvContent.TabIndex = 0;
-            this.dgvContent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellClick);
             this.dgvContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellContentClick);
             // 
             // panelControl1
@@ -157,35 +165,27 @@ namespace QuanLiHocThem.Pages
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(800, 248);
-            this.panelControl1.TabIndex = 7;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            this.panelControl1.TabIndex = 9;
             // 
-            // mucHocPhiBindingSource
+            // labelControl3
             // 
-            this.mucHocPhiBindingSource.CurrentChanged += new System.EventHandler(this.mucHocPhiBindingSource_CurrentChanged);
+            this.labelControl3.Location = new System.Drawing.Point(96, 109);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(18, 13);
+            this.labelControl3.TabIndex = 16;
+            this.labelControl3.Text = "Tên";
+            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
-            // giaoVienBindingSource
-            // 
-            this.giaoVienBindingSource.CurrentChanged += new System.EventHandler(this.giaoVienBindingSource_CurrentChanged);
-            // 
-            // khoaHocBindingSource
-            // 
-            this.khoaHocBindingSource.CurrentChanged += new System.EventHandler(this.khoaHocBindingSource_CurrentChanged);
-            // 
-            // monHocBindingSource
-            // 
-            this.monHocBindingSource.CurrentChanged += new System.EventHandler(this.monHocBindingSource_CurrentChanged);
-            // 
-            // frmAdminMTT
+            // frmAdminMH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Name = "frmAdminMTT";
-            this.Text = "frmAdminMTT";
-            this.Load += new System.EventHandler(this.frmAdminMTT_Load_1);
+            this.Name = "frmAdminMH";
+            this.Text = "frmAdminMH";
+            this.Load += new System.EventHandler(this.frmAdminMH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
@@ -205,12 +205,11 @@ namespace QuanLiHocThem.Pages
 
         #endregion
 
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.TextBox tbMtt;
+        private System.Windows.Forms.TextBox tbTMH;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.DataGridView dgvContent;
@@ -219,5 +218,8 @@ namespace QuanLiHocThem.Pages
         private System.Windows.Forms.BindingSource giaoVienBindingSource;
         private System.Windows.Forms.BindingSource khoaHocBindingSource;
         private System.Windows.Forms.BindingSource monHocBindingSource;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.TextBox tbSLGV;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

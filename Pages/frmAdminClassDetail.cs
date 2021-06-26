@@ -155,5 +155,10 @@ namespace QuanLiHocThem
             else if (dowStr == "Thu bay") return DayOfWeek.Saturday;
             else return DayOfWeek.Sunday;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

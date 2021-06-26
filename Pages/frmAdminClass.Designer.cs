@@ -39,13 +39,9 @@ namespace QuanLiHocThem.Pages
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.tbHocPhi1Buoi = new System.Windows.Forms.TextBox();
             this.cboMucHocPhi = new System.Windows.Forms.ComboBox();
-            this.mucHocPhiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboGiaoVien = new System.Windows.Forms.ComboBox();
-            this.giaoVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboKhoaHoc = new System.Windows.Forms.ComboBox();
-            this.khoaHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboMonHoc = new System.Windows.Forms.ComboBox();
-            this.monHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -67,19 +63,23 @@ namespace QuanLiHocThem.Pages
             this.HocPhiMotBuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MucHocPhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChiTiet = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.mucHocPhiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.giaoVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.khoaHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.monHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mucHocPhiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -181,10 +181,6 @@ namespace QuanLiHocThem.Pages
             this.cboMucHocPhi.TabIndex = 22;
             this.cboMucHocPhi.ValueMember = "Ma";
             // 
-            // mucHocPhiBindingSource
-            // 
-            this.mucHocPhiBindingSource.DataSource = typeof(QuanLiHocThem.MucHocPhi);
-            // 
             // cboGiaoVien
             // 
             this.cboGiaoVien.DataSource = this.giaoVienBindingSource;
@@ -195,10 +191,6 @@ namespace QuanLiHocThem.Pages
             this.cboGiaoVien.Size = new System.Drawing.Size(192, 21);
             this.cboGiaoVien.TabIndex = 20;
             this.cboGiaoVien.ValueMember = "Ma";
-            // 
-            // giaoVienBindingSource
-            // 
-            this.giaoVienBindingSource.DataSource = typeof(QuanLiHocThem.GiaoVien);
             // 
             // cboKhoaHoc
             // 
@@ -211,10 +203,6 @@ namespace QuanLiHocThem.Pages
             this.cboKhoaHoc.TabIndex = 19;
             this.cboKhoaHoc.ValueMember = "Ma";
             // 
-            // khoaHocBindingSource
-            // 
-            this.khoaHocBindingSource.DataSource = typeof(QuanLiHocThem.KhoaHoc);
-            // 
             // cboMonHoc
             // 
             this.cboMonHoc.DataSource = this.monHocBindingSource;
@@ -225,10 +213,6 @@ namespace QuanLiHocThem.Pages
             this.cboMonHoc.Size = new System.Drawing.Size(192, 21);
             this.cboMonHoc.TabIndex = 18;
             this.cboMonHoc.ValueMember = "Ma";
-            // 
-            // monHocBindingSource
-            // 
-            this.monHocBindingSource.DataSource = typeof(QuanLiHocThem.MonHoc);
             // 
             // labelControl1
             // 
@@ -401,6 +385,22 @@ namespace QuanLiHocThem.Pages
             this.ChiTiet.Text = "Chi tiet";
             this.ChiTiet.UseColumnTextForButtonValue = true;
             // 
+            // mucHocPhiBindingSource
+            // 
+            this.mucHocPhiBindingSource.DataSource = typeof(QuanLiHocThem.MucHocPhi);
+            // 
+            // giaoVienBindingSource
+            // 
+            this.giaoVienBindingSource.DataSource = typeof(QuanLiHocThem.GiaoVien);
+            // 
+            // khoaHocBindingSource
+            // 
+            this.khoaHocBindingSource.DataSource = typeof(QuanLiHocThem.KhoaHoc);
+            // 
+            // monHocBindingSource
+            // 
+            this.monHocBindingSource.DataSource = typeof(QuanLiHocThem.MonHoc);
+            // 
             // frmAdminClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,13 +419,13 @@ namespace QuanLiHocThem.Pages
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mucHocPhiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).EndInit();
             this.ResumeLayout(false);
 
         }

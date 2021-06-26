@@ -250,5 +250,20 @@ namespace QuanLiHocThem
         {
 
         }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit3_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -103,6 +103,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\frmAdminCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\frmAdminCH.Designer.cs">
+      <DependentUpon>frmAdminCH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\frmAdminClassDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="Pages\frmAdminKH.Designer.cs">
       <DependentUpon>frmAdminKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\frmAdminMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\frmAdminMH.Designer.cs">
+      <DependentUpon>frmAdminMH.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\frmAdminMHP.cs">
       <SubType>Form</SubType>
@@ -224,6 +236,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\frmAdminCH.resx">
+      <DependentUpon>frmAdminCH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminClassDetail.resx">
       <DependentUpon>frmAdminClassDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminKH.resx">
       <DependentUpon>frmAdminKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\frmAdminMH.resx">
+      <DependentUpon>frmAdminMH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\frmAdminMHP.resx">
       <DependentUpon>frmAdminMHP.cs</DependentUpon>
