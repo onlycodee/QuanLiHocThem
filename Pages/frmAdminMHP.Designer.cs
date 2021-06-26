@@ -66,6 +66,7 @@ namespace QuanLiHocThem.Pages
             this.dgvContent.Name = "dgvContent";
             this.dgvContent.Size = new System.Drawing.Size(796, 198);
             this.dgvContent.TabIndex = 0;
+            this.dgvContent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellClick);
             this.dgvContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellContentClick);
             // 
             // panelControl2
@@ -76,6 +77,7 @@ namespace QuanLiHocThem.Pages
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(800, 202);
             this.panelControl2.TabIndex = 6;
+            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
             // panelControl1
             // 
@@ -85,6 +87,7 @@ namespace QuanLiHocThem.Pages
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(800, 248);
             this.panelControl1.TabIndex = 5;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // panelControl4
             // 
@@ -100,6 +103,7 @@ namespace QuanLiHocThem.Pages
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(796, 244);
             this.panelControl4.TabIndex = 17;
+            this.panelControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl4_Paint);
             // 
             // simpleButton1
             // 
@@ -127,6 +131,7 @@ namespace QuanLiHocThem.Pages
             this.labelControl1.Size = new System.Drawing.Size(206, 24);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Danh sach muc hoc phi";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // labelControl6
             // 
@@ -135,6 +140,7 @@ namespace QuanLiHocThem.Pages
             this.labelControl6.Size = new System.Drawing.Size(56, 13);
             this.labelControl6.TabIndex = 11;
             this.labelControl6.Text = "Muc hoc phi";
+            this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
             // 
             // btnXoa
             // 
@@ -157,18 +163,22 @@ namespace QuanLiHocThem.Pages
             // mucHocPhiBindingSource
             // 
             this.mucHocPhiBindingSource.DataSource = typeof(QuanLiHocThem.MucHocPhi);
+            this.mucHocPhiBindingSource.CurrentChanged += new System.EventHandler(this.mucHocPhiBindingSource_CurrentChanged);
             // 
             // giaoVienBindingSource
             // 
             this.giaoVienBindingSource.DataSource = typeof(QuanLiHocThem.GiaoVien);
+            this.giaoVienBindingSource.CurrentChanged += new System.EventHandler(this.giaoVienBindingSource_CurrentChanged);
             // 
             // khoaHocBindingSource
             // 
             this.khoaHocBindingSource.DataSource = typeof(QuanLiHocThem.KhoaHoc);
+            this.khoaHocBindingSource.CurrentChanged += new System.EventHandler(this.khoaHocBindingSource_CurrentChanged);
             // 
             // monHocBindingSource
             // 
             this.monHocBindingSource.DataSource = typeof(QuanLiHocThem.MonHoc);
+            this.monHocBindingSource.CurrentChanged += new System.EventHandler(this.monHocBindingSource_CurrentChanged);
             // 
             // frmAdminMHP
             // 
